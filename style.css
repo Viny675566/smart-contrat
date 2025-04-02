@@ -1,55 +1,23 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-header {
-    background-color: #1a73e8;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.header-image {
-    max-width: 200px; /* Ajuste la taille de l'image */
-    height: auto;
-    display: block;
-    margin: 0 auto 1rem auto; /* Centre l'image et ajoute un espace en bas */
-    border-radius: 8px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-}
-
-section {
+#wallet-connect {
     padding: 2rem;
     margin: 1rem;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-h2 {
+#wallet-connect h2 {
     color: #1a73e8;
     font-size: 1.8rem;
 }
 
-ul {
-    list-style-type: disc;
-    padding-left: 2rem;
+#wallet-connect p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
-button {
+#connect-wallet-btn, #disconnect-wallet-btn {
     background-color: #1a73e8;
     color: white;
     border: none;
@@ -57,25 +25,9 @@ button {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0.5rem;
 }
 
-button:hover {
+#connect-wallet-btn:hover, #disconnect-wallet-btn:hover {
     background-color: #1557b0;
 }
-
-#message {
-    margin-top: 1rem;
-    color: #28a745;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #1a73e8;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-

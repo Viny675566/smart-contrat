@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <!-- Script Google reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Scripts WalletConnect -->
+    <script src="https://unpkg.com/@walletconnect/ethereum-provider@2.14.0/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/@web3modal/standalone@3.0.2/dist/index.umd.js"></script>
+    <!-- Script Web3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.3.0/web3.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,6 +19,17 @@
         <h1>Smart Contrat</h1>
         <p>Your Trusted Platform for Secure Smart Contracts</p>
     </header>
+
+    <!-- Nouvelle section pour Wallet Connect -->
+    <section id="wallet-connect">
+        <h2>Connect Your Wallet</h2>
+        <p>Connect your Web3 wallet to interact with our platform.</p>
+        <button id="connect-wallet-btn">Connect Wallet</button>
+        <p id="wallet-address" style="display: none; color: #28a745; font-weight: bold;">
+            Connected Address: <span id="address"></span>
+        </p>
+        <button id="disconnect-wallet-btn" style="display: none;">Disconnect Wallet</button>
+    </section>
 
     <section id="about">
         <h2>About Us</h2>
@@ -47,7 +63,6 @@
         <form id="waitlist-form" style="display: none;">
             <label for="evm-address">EVM Address:</label>
             <input type="text" id="evm-address" name="evm-address" placeholder="0x..." required>
-            <!-- Widget reCAPTCHA avec la Clé de site -->
             <div class="g-recaptcha" data-sitekey="6LcohAcrAAAAAC_DGZeL20M5r-SUuntwmm-E8407"></div>
             <button type="submit">Submit</button>
         </form>
