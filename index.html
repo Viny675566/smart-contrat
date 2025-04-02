@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Contrat - Secure Blockchain Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Script Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header>
@@ -32,12 +34,53 @@
 
     <section id="cta">
         <h2>Get Started Today!</h2>
-        <button onclick="showMessage()">Join Now</button>
+        <a href="https://x.com/richthecrypto?t=FGsawSHgoSdFYu57xcSH5g&s=09" target="_blank">
+            <button>Join Now</button>
+        </a>
         <p id="message" style="display: none;">Thank you for your interest! We'll contact you soon.</p>
+    </section>
+
+    <section id="waitlist">
+        <h2>Join Our Waitlist</h2>
+        <p>Enter your EVM address to be eligible for our exclusive waitlist!</p>
+        <button onclick="showWaitlistForm()">Join Waitlist</button>
+        <form id="waitlist-form" style="display: none;">
+            <label for="evm-address">EVM Address:</label>
+            <input type="text" id="evm-address" name="evm-address" placeholder="0x..." required>
+            <!-- Widget reCAPTCHA avec la Clé de site -->
+            <div class="g-recaptcha" data-sitekey="6LcohAcrAAAAAC_DGZeL20M5r-SUuntwmm-E8407"></div>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="waitlist-message" style="display: none; color: #28a745; font-weight: bold;">Thank you! You are now on the waitlist.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="form-message" style="display: none; color: #28a745; font-weight: bold;">Thank you for your message! We'll get back to you soon.</p>
+    </section>
+
+    <section id="footer-image">
+        <img src="footer-image.jpg" alt="AI and Blockchain Image" class="footer-image">
     </section>
 
     <footer>
         <p>© 2025 Smart Contrat. All rights reserved.</p>
+        <div class="social-buttons">
+            <a href="https://x.com/richthecrypto?t=FGsawSHgoSdFYu57xcSH5g&s=09" target="_blank" class="social-button twitter">Follow us on Twitter</a>
+            <a href="https://t.me/RICHTHECRYPTO" target="_blank" class="social-button telegram">Join us on Telegram</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
